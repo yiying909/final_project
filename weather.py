@@ -27,5 +27,7 @@ print("Temperature is:", temp)
 print("Time:", time)
 print("Sky Description:", sky)
 
+tempNumber=int(temp[:len(temp)-2])
+
 
 
