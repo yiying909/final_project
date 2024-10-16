@@ -21,11 +21,11 @@ data = str_.split('\n')
 time = data[0]
 sky = data[1]
 
-
 # Printing the extracted weather data
 print("Temperature is:", temp)
 print("Time:", time)
 print("Sky Description:", sky)
 
+tempNumber=int(temp[:len(temp)-2])
 
 
