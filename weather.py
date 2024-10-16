@@ -22,4 +22,4 @@ with temperature is {temp_f}°F/{temp_c}°C, and {description}
 ''')
 
 from clothDecison import get_outfit
-print(f'we recommand wearing {get_outfit(temp_f)}')
+print(f'we recommend wearing {get_outfit(temp_f)}')
