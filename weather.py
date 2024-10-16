@@ -20,5 +20,3 @@ description = content.find('div', attrs={'class': 'wob_dcp'}).text
 print(f'''Right now is {real_time},
 with temperature is {temp_f}°F/{temp_c}°C, and {description}
 ''')
-
-# <span class="wob_t" id="wob_ttm" style="">12</span>
