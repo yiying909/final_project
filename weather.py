@@ -12,11 +12,14 @@ html_content = requests.get(url, headers = header).content
 content = BeautifulSoup(html_content, 'html.parser')
 
 # find actual info needed from content: temp in °F and °C
-temp_f = content.find('span', attrs={'class': 'wob_t q8U8x'}).text
-temp_c = content.find('span', id='wob_ttm').text
+temp_f = int(content.find('span', attrs={'class': 'wob_t q8U8x'}).text)
+temp_c = int(content.find('span', id='wob_ttm').text)
 real_time = content.find('div', attrs={'class': 'wob_dts'}).text
 description = content.find('div', attrs={'class': 'wob_dcp'}).text
 
 print(f'''Right now is {real_time},
 with temperature is {temp_f}°F/{temp_c}°C, and {description}
 ''')
+
+from clothDecison import get_outfit
+print(f'we recommand wearing {get_outfit(temp_f)}')
