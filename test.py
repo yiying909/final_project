@@ -14,7 +14,7 @@ html = requests.get(url, headers = header).content
 soup = BeautifulSoup(html, 'html.parser')
 
 # Extracting the temperature
-temp = soup.find('div', attrs={'class': 'BNeawe iBp4i AP7Wnd'}).text
+# temp = soup.find('div', attrs={'class': 'BNeawe iBp4i AP7Wnd'}).text
 temp = soup.find('span', attrs={'class': 'wob_t q8U8x'}).text
 
 # Extracting the time and sky description
@@ -30,4 +30,3 @@ temp = soup.find('span', attrs={'class': 'wob_t q8U8x'}).text
 # print("Sky Description:", sky)
 
 
-print(soup.prettify())
