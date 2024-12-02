@@ -16,11 +16,11 @@ def create_cloth(data):
     return clothes
 
 def filter(data, typename):
-    # lst = [elem for elem in data if elem.typename == typename]
-    lst = []
-    for elem in data:
-        if elem.typename == typename:
-            lst.append(elem)
+    lst = [elem for elem in data if elem.typename == typename]
+    # lst = []
+    # for elem in data:
+    #     if elem.typename == typename:
+    #         lst.append(elem)
     return lst
 
 
