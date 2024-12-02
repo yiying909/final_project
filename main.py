@@ -23,7 +23,7 @@ outfit = get_outfit(temp_f)  # 获取推荐的服装
 
 image_paths = []
 for item in outfit:
-    filtered = filter(clothdata, item)  # 使用 filter 函数
+    filtered = filter(clothes, item)  # 使用 filter 函数
     if filtered:
         # 随机选择一个文件名
         random_item = random.choice(filtered)

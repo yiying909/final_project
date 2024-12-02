@@ -50,7 +50,7 @@ def write_csv(fname = "clothes.csv"):
             num = int(num)  # 检查输入是否为整数
         except ValueError:
             print("Please enter a valid number.")
-            return
+            return #why return here
         
         for i in range(num):
             types = get_type()
@@ -59,12 +59,13 @@ def write_csv(fname = "clothes.csv"):
             if not filename:
                 print("File name cannot be empty.")
                 continue  # 跳过此次循环
+            # skip one loop, but next same issue?
             
             data = {
                 "filename": filename,
                 "type": result
             }        
-            # display clothes data
+            # ?display clothes data
             csv_writer.writerow(value for value in data.values())
 
     
@@ -80,8 +81,8 @@ def read_csv(fname="clothes.csv"):
 
 
 
-# ask for clothes
-write_csv()
+# # ask for clothes
 # write_csv()
-clothes_data = read_csv()
-print(clothes_data)
+# # write_csv()
+# clothes_data = read_csv()
+# print(clothes_data)

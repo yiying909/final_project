@@ -3,6 +3,7 @@ import os
 
 # 定义图片存储的默认路径
 default_dir = r'D:\CICS110\final_project\picture'
+# only work on local?
 default_size = (200, 200)  # 设置默认大小为 200x200 像素
 
 def resize_image(img):
