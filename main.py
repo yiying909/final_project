@@ -2,8 +2,9 @@ from csv_func import write_csv, read_csv
 from class_def import create_cloth, filter
 from clothDecison import get_outfit
 from weather import get_weather
-import random
+import random, os
 from display import display_images
+
 
 # 获取天气信息
 temp_c, temp_f = get_weather()
@@ -27,7 +28,7 @@ for item in outfit:
     if filtered:
         # 随机选择一个文件名
         random_item = random.choice(filtered)
-        image_paths.append(random_item[0])  # 添加文件名到路径列表
+        image_paths.append(random_item.filename)  # 添加文件名到路径列表
 
 # 显示选择的图片
 if image_paths:

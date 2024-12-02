@@ -1,8 +1,12 @@
 from PIL import Image
 import os
 
+current_dir = os.getcwd()
+# print("Current Directory:", current_dir)
+
 # 定义图片存储的默认路径
-default_dir = r'D:\CICS110\final_project\picture'
+# default_dir = r'D:\CICS110\final_project\picture'
+
 # only work on local?
 default_size = (200, 200)  # 设置默认大小为 200x200 像素
 
@@ -11,7 +15,7 @@ def resize_image(img):
     return img.resize(default_size, Image.LANCZOS)  # 使用 LANCZOS 进行高质量缩放
 
 def display_images(image_filenames):
-    image_paths = [os.path.join(default_dir, f"{filename}.png") for filename in image_filenames]
+    image_paths = [os.path.join(current_dir, "picture", f"{filename}.png") for filename in image_filenames]
 
     images = []
     for img_path in image_paths:
@@ -33,7 +37,7 @@ def display_images(image_filenames):
     # 创建新图像以合成所有图片
     new_image = Image.new('RGB', (max_width, total_height))
 
-    current_height = 0.
+    current_height = 0
     for img in images:
         new_image.paste(img, (0, current_height))
         current_height += img.height

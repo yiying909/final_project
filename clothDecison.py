@@ -1,7 +1,7 @@
 top_wear = ['T-shirt', 'Long-sleeve shirt', 'Sweater', 'Jacket', 'Heavy jacket', 'Heavy winter coat']
-bottom_wear = ['shorts', 'pants']
-footwear = ['sandals', 'sneakers', 'boots']
-accessories = ['gloves', 'scarf', 'hat']
+bottom_wear = ['Shorts', 'Pants']
+footwear = ['Sandals', 'Sneakers', 'Boots']
+accessories = ['Gloves', 'Scarf', 'Hat']
 
 def get_outfit(temperature):
     outfit = []
