@@ -35,7 +35,7 @@ def display_images(image_filenames):
     max_width = max(img.width for img in images)
 
     # 创建新图像以合成所有图片
-    new_image = Image.new('RGB', (max_width, total_height))
+    new_image = Image.new('RGBA', (max_width, total_height))
 
     current_height = 0
     for img in images:
