@@ -24,5 +24,7 @@ def get_weather():
 
     return temp_c, temp_f
 
+# get_weather()
+
 # from clothDecison import get_outfit
 # print(f'we recommend wearing {get_outfit(temp_f)}')
