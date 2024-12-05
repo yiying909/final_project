@@ -1,12 +1,13 @@
 class Cloth:
-    def __init__(self, filename, typename) -> None:
+    def __init__(self, filename, typename, subtypename = None) -> None:
         self.filename = filename
         self.typename = typename
+        self.subtypename = subtypename
         # Cloth.clothes.append(self)
         pass
 
     def __repr__(self) -> str:
-        return f'cloth {self.typename} in {self.filename}'
+        return f'cloth {self.typename} {self.subtypename} in {self.filename}'
 
 def create_cloth(data):
     clothes = []

@@ -2,7 +2,7 @@ from csv_func import write_csv, read_csv
 from class_def import create_cloth, filter
 from clothDecison import get_outfit
 from weather import get_weather
-import random, os
+import random
 from display import display_images
 
 
