@@ -1,20 +1,22 @@
 import os
 from tkinter import ttk, filedialog, messagebox
 from class_def import Cloth
+from json_func import upload_json
+
 
 types = ["topwear", "bottomwear", "footwear", "accessories"]
 topwear = ['T-shirt', 'Long-sleeve shirt', 'Sweater', 'Jacket', 'Heavy jacket', 'Heavy winter coat']
 bottomwear = ['Shorts', 'Pants']
 footwear = ['Sandals', 'Sneakers', 'Boots']
 accessories = ['Gloves', 'Scarf', 'Hat']
-file_name = None
-file_namelst = []
-clothes = []
 
-def check_upload(combo1, combo2, file_name):
-    global clothes
+
+def check_upload(file_name, combo1, combo2):
+    clothes = []
     if combo1 != "type" and combo2 != "subtype":
-        clothes.append(Cloth(file_name, combo1, combo2))
+        clothes.append(Cloth(file_name, combo2, combo1))
+        upload_json(clothes)
+    
 
 def update_combo2(event, combo1, combo2):
     global topwear, bottomwear, footwear, accessories
@@ -42,30 +44,28 @@ def upload_combo(frame):
     
     return cloth_type, cloth_subtype
 
-def upload_command():
-    global file_namelst, file_name
+def upload_command(filenames, combo1, combo2):
     file_path = filedialog.askopenfilename(title="Upload the image here.", filetypes=[("Image Files", "*.png")])
     if file_path:
         file_name = os.path.basename(file_path)
-        if file_name not in file_namelst:
-            file_namelst.append(file_name)
+        if file_name not in filenames:
             save_path = os.path.join("pictures", file_name)
             with open(file_path, "rb") as f_in, open(save_path, "wb") as f_out:
                 f_out.write(f_in.read())
             messagebox.showinfo("Upload Success", f"{file_name} has successfully uploaded.")
+            check_upload(file_name, combo1.get(), combo2.get())
         else:
             messagebox.showerror("File Exists","this filename already exists, please name it something else.")
 
-def upload_image(frame):
+def upload_image(frame, filenames, combo1, combo2):
     upload_frame = ttk.Frame(frame)
     upload_frame.pack(pady=65)
-    ttk.Button(upload_frame, text="Select Image", command=upload_command).pack(pady=10)
+    ttk.Button(upload_frame, text="Select Image", command= lambda: upload_command(filenames, combo1, combo2)).pack(pady=10)
 
-def upload(frame):
+def upload(frame, filenames):
     comboframe = ttk.Frame(frame)
     comboframe.pack(pady=30)
     imageframe = ttk.Frame(frame)
     imageframe.pack(pady=50)
     combo1, combo2 = upload_combo(comboframe)
-    upload_image(imageframe)
-    ttk.Button(frame, text="Upload", command=lambda:check_upload(file_name, combo2.get(), combo1.get())).pack(pady=10)
+    upload_image(imageframe, filenames, combo1, combo2)
