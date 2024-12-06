@@ -1,7 +1,8 @@
 {
     "filenames": [
         "tshirt1.png",
-        "pants2.png"
+        "pants2.png",
+        "jacket1.png"
     ],
     "clothdic": [
         {
@@ -13,6 +14,11 @@
             "filename": "pants2.png",
             "typename": "bottomwear",
             "subtypename": "Pants"
+        },
+        {
+            "filename": "jacket1.png",
+            "typename": "topwear",
+            "subtypename": "Jacket"
         }
     ]
 }
