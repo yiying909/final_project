@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter import ttk
+from components.display_tab import display
 from components.rec_tab import rec
 from components.upload_tab import upload
 from json_func import read_json
@@ -17,7 +18,7 @@ tab_container = ttk.Notebook(root)
 #frame 3: upload clothes
 upload_tab = ttk.Frame(tab_container)
 tab_container.add(upload_tab, text="upload")
-upload(upload_tab, filenames)
+upload(upload_tab, filenames, clothes)
 
 
 
@@ -31,7 +32,7 @@ rec(rec_tab, clothes)
 #frame 1: clothes display
 display_tab = ttk.Frame(tab_container)
 tab_container.add(display_tab, text="display")
-
+display(display_tab, filenames)
 
 
 

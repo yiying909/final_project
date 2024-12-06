@@ -15,7 +15,7 @@ def resize_image(img):
     return img.resize(default_size, Image.LANCZOS)  # 使用 LANCZOS 进行高质量缩放
 
 def display_images(image_filenames):
-    image_paths = [os.path.join(current_dir, "pictures", f"{filename}.png") for filename in image_filenames]
+    image_paths = [os.path.join(current_dir, "pictures", filename) for filename in image_filenames]
 
     images = []
     for img_path in image_paths:
