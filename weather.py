@@ -3,10 +3,13 @@ import requests
 from bs4 import BeautifulSoup
 
 # ask for location and get search result; determine header to access actual attritube on webpage
-def get_weather():
-    header = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"}
+def get_city():
     location = input("where are you at? ")
-    url = "https://www.google.com/search?q=" + "weather" + location
+    return location
+
+def get_weather(city):
+    header = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"}
+    url = "https://www.google.com/search?q=" + "weather" + city
     html_content = requests.get(url, headers = header).content
 
     # parse html into readable content
@@ -22,8 +25,11 @@ def get_weather():
     with temperature is {temp_f}°F/{temp_c}°C, and {description}
     ''')
 
-    return temp_c, temp_f
+    return real_time, temp_c, temp_f, description
 
+def tm_get_weather():
+    get_weather(get_city())
+    
 # get_weather()
 
 # from clothDecison import get_outfit

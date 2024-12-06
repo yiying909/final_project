@@ -1,13 +1,13 @@
 from csv_func import write_csv, read_csv
 from class_def import create_cloth, filter
 from clothDecison import get_outfit
-from weather import get_weather
+from weather import tm_get_weather
 import random
-from display import display_images
+from display import tm_display_images
 
 
 # 获取天气信息
-temp_c, temp_f = get_weather()
+_, _, temp_f, _ = tm_get_weather()
 
 # 询问用户是否要上传衣物
 upload_choice = input("Do you want to upload clothing data? (yes/no): ")
@@ -32,6 +32,6 @@ for item in outfit:
 
 # 显示选择的图片
 if image_paths:
-    display_images(image_paths)
+    tm_display_images(image_paths)
 else:
     print("No matching clothing images found.")

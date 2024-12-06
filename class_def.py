@@ -1,5 +1,5 @@
 class Cloth:
-    def __init__(self, filename, typename, subtypename = None) -> None:
+    def __init__(self, filename, subtypename, typename=None) -> None:
         self.filename = filename
         self.typename = typename
         self.subtypename = subtypename
@@ -17,7 +17,7 @@ def create_cloth(data):
     return clothes
 
 def filter(data, typename):
-    lst = [elem for elem in data if elem.typename == typename]
+    lst = [elem for elem in data if elem.subtypename == typename]
     # lst = []
     # for elem in data:
     #     if elem.typename == typename:

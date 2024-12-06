@@ -44,7 +44,7 @@ def upload_combo(frame):
 
 def upload_command():
     global file_namelst, file_name
-    file_path = filedialog.askopenfilename(title="Upload the image here.", filetypes=[("Image Files", "*.png;*.jpg;*.jpeg")])
+    file_path = filedialog.askopenfilename(title="Upload the image here.", filetypes=[("Image Files", "*.png")])
     if file_path:
         file_name = os.path.basename(file_path)
         if file_name not in file_namelst:
@@ -52,9 +52,9 @@ def upload_command():
             save_path = os.path.join("pictures", file_name)
             with open(file_path, "rb") as f_in, open(save_path, "wb") as f_out:
                 f_out.write(f_in.read())
-            messagebox.showinfo(f"{file_name} has successfully uploaded.")
+            messagebox.showinfo("Upload Success", f"{file_name} has successfully uploaded.")
         else:
-            messagebox.showerror("this filename already exists, please name it something else.")
+            messagebox.showerror("File Exists","this filename already exists, please name it something else.")
 
 def upload_image(frame):
     upload_frame = ttk.Frame(frame)
@@ -68,4 +68,4 @@ def upload(frame):
     imageframe.pack(pady=50)
     combo1, combo2 = upload_combo(comboframe)
     upload_image(imageframe)
-    ttk.Button(frame, text="Upload", command=lambda:check_upload(file_name, combo1.get(), combo2.get())).pack(pady=10)
+    ttk.Button(frame, text="Upload", command=lambda:check_upload(file_name, combo2.get(), combo1.get())).pack(pady=10)
