@@ -32,7 +32,7 @@ def display_command(frame, image_filenames):
 
 
 def display(frame, filenames):
-    ttk.Label(frame, text="Your closet").pack(pady=10)
+    ttk.Label(frame, text="Your Closet", font=("Arial", 10)).pack(pady=10)
 
     #canvas with scrollbar
     canvas = tk.Canvas(frame)
