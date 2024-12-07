@@ -70,4 +70,11 @@ def rec(frame, clothes):
     canvas.pack(side='left', fill='both', expand=True, pady=20)
     canvas.configure(xscrollcommand=scrollbar.set)
 
+    # def on_mousewheel(event):
+    #     delta = event.delta if event.delta else -1 # Normalize for Button-4/5
+    #     canvas.xview_scroll(-1 * (delta // abs(delta)), "units")  # Use sign only, ignore magnitude
 
+
+    # canvas.bind("<MouseWheel>", on_mousewheel)
+    # canvas.bind("<Button-4>", lambda event: canvas.xview_scroll(-1, 'units'))
+    # canvas.bind("<Button-5>", lambda event: canvas.xview_scroll(1, 'units'))
