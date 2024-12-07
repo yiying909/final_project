@@ -15,7 +15,7 @@ def display_command(frame, image_filenames):
             row = i // image_perrow
             cln = i % image_perrow
             label = ttk.Label(frame, image=elm)
-            label.grid(column=cln, row=row, padx=5, pady=5)
+            label.grid(column=cln, row=row, padx=1, pady=5)
             label.image = elm
 
 

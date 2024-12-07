@@ -34,7 +34,9 @@ def update_image(entry, clothes):
     if image_filenames:
         images = display_images(image_filenames) ##only supporting png format
         for elm in images:
-            ttk.Label(image_frame, image=elm).pack(padx=5)    
+            label = ttk.Label(image_frame, image=elm)
+            label.image = elm
+            label.pack(padx=5, side='left')    
 
     
 
@@ -50,9 +52,9 @@ def rec(frame, clothes):
     #recframe to display rec
     global rec_message, image_frame
     rec_frame = ttk.Frame(frame)
-    rec_frame.pack(pady=70)
+    rec_frame.pack(pady=10)
     rec_message = ttk.Label(rec_frame, text="")
-    rec_message.pack(padx=30)
+    rec_message.pack(padx=30, side='top')
     #image frame to display mutiple images
     image_frame = ttk.Frame(rec_frame)
     image_frame.pack(pady=60)
