@@ -1,14 +1,83 @@
 {
     "filenames": [
-        "tshirt1.png",
+        "boots1.png",
+        "boots2.png",
+        "gloves1.png",
+        "hat1.png",
+        "hjacket1.png",
+        "hwc1.png",
+        "hwc2.png",
+        "jacket1.png",
+        "jacket2.png",
+        "lsshirt1.png",
+        "pants1.png",
         "pants2.png",
-        "jacket1.png"
+        "sandals1.png",
+        "sandals2.png",
+        "scarf1.png",
+        "shorts1.png",
+        "shorts2.png",
+        "sneakers1.png",
+        "sweater1.png",
+        "sweater2.png",
+        "sweater3.png",
+        "tshirt1.png"
     ],
     "clothdic": [
         {
-            "filename": "tshirt1.png",
+            "filename": "boots1.png",
+            "typename": "footwear",
+            "subtypename": "Boots"
+        },
+        {
+            "filename": "boots2.png",
+            "typename": "footwear",
+            "subtypename": "Boots"
+        },
+        {
+            "filename": "gloves1.png",
+            "typename": "accessories",
+            "subtypename": "Gloves"
+        },
+        {
+            "filename": "hat1.png",
+            "typename": "accessories",
+            "subtypename": "Hats"
+        },
+        {
+            "filename": "hjacket1.png",
             "typename": "topwear",
-            "subtypename": "T-shirt"
+            "subtypename": "Heavy jacket"
+        },
+        {
+            "filename": "hwc1.png",
+            "typename": "topwear",
+            "subtypename": "Heavy winter coat"
+        },
+        {
+            "filename": "hwc2.png",
+            "typename": "topwear",
+            "subtypename": "Heavy winter coat"
+        },
+        {
+            "filename": "jacket1.png",
+            "typename": "topwear",
+            "subtypename": "Jacket"
+        },
+        {
+            "filename": "jacket2.png",
+            "typename": "topwear",
+            "subtypename": "Jacket"
+        },
+        {
+            "filename": "lsshirt1.png",
+            "typename": "topwear",
+            "subtypename": "Long-sleeve shirt"
+        },
+        {
+            "filename": "pants1.png",
+            "typename": "bottomwear",
+            "subtypename": "Pants"
         },
         {
             "filename": "pants2.png",
@@ -16,9 +85,54 @@
             "subtypename": "Pants"
         },
         {
-            "filename": "jacket1.png",
+            "filename": "sandals1.png",
+            "typename": "footwear",
+            "subtypename": "Sandals"
+        },
+        {
+            "filename": "sandals2.png",
+            "typename": "footwear",
+            "subtypename": "Sandals"
+        },
+        {
+            "filename": "scarf1.png",
+            "typename": "accessories",
+            "subtypename": "Scarf"
+        },
+        {
+            "filename": "shorts1.png",
+            "typename": "bottomwear",
+            "subtypename": "Shorts"
+        },
+        {
+            "filename": "shorts2.png",
+            "typename": "bottomwear",
+            "subtypename": "Shorts"
+        },
+        {
+            "filename": "sneakers1.png",
+            "typename": "footwear",
+            "subtypename": "Sneakers"
+        },
+        {
+            "filename": "sweater1.png",
             "typename": "topwear",
-            "subtypename": "Jacket"
+            "subtypename": "Sweater"
+        },
+        {
+            "filename": "sweater2.png",
+            "typename": "topwear",
+            "subtypename": "Sweater"
+        },
+        {
+            "filename": "sweater3.png",
+            "typename": "topwear",
+            "subtypename": "Sweater"
+        },
+        {
+            "filename": "tshirt1.png",
+            "typename": "topwear",
+            "subtypename": "T-shirt"
         }
     ]
 }
