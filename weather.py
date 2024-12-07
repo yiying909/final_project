@@ -27,8 +27,6 @@ def get_weather(city):
 
     return real_time, temp_c, temp_f, description
 
-def tm_get_weather():
-    get_weather(get_city())
     
 # get_weather()
 
