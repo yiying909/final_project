@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import ttk
-from final_project.core.display import display_images
+from core.display import display_images
 
 
 def display_command(frame, image_filenames):

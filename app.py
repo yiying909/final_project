@@ -3,7 +3,7 @@ from tkinter import ttk
 from components.display_tab import display
 from components.rec_tab import rec
 from components.upload_tab import upload
-from final_project.core.json_func import read_json
+from core.json_func import read_json
 import ttkbootstrap as ttk
 
 root=ttk.Window(themename='cosmo')

@@ -1,10 +1,10 @@
 import random
 import tkinter as tk
 from tkinter import ttk
-from final_project.core.clothDecison import get_outfit
-from final_project.core.display import display_images
-from final_project.core.weather import get_weather, get_7dayweather
-from final_project.core.class_def import filter 
+from core.clothDecison import get_outfit
+from core.display import display_images
+from core.weather import get_weather, get_7dayweather
+from core.class_def import filter 
 
 rec_message, image_frame = None, None
 
