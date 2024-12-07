@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import ttk
 from core.display import display_images
 
+imageframe = None
 
 def display_command(frame, image_filenames):
     for widget in frame.winfo_children():
@@ -32,7 +33,7 @@ def display_command(frame, image_filenames):
 
 
 def display(frame, filenames):
-    ttk.Label(frame, text="Your Closet", font=("Arial", 15)).pack(pady=10)
+    ttk.Label(frame, text="Your Closet", font=("Arial", 20)).pack(pady=10)
 
     #canvas with scrollbar
     canvas = tk.Canvas(frame)
@@ -42,6 +43,7 @@ def display(frame, filenames):
     canvas.config(yscrollcommand=scrollbar.set)
 
     #embed frame inside canvas
+    global imageframe
     imageframe = ttk.Frame(canvas)
     canvas.create_window((0, 0), anchor='nw', window=imageframe)
     display_command(imageframe, filenames)
