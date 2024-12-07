@@ -3,7 +3,7 @@ import tkinter as tk
 from tkinter import ttk
 from clothDecison import get_outfit
 from display import display_images
-from weather import get_weather
+from weather import get_weather, get_7dayweather
 from class_def import filter 
 
 rec_message, image_frame = None, None
