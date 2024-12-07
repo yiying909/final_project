@@ -1,4 +1,5 @@
 import random
+import tkinter as tk
 from tkinter import ttk
 from clothDecison import get_outfit
 from display import display_images
@@ -38,8 +39,6 @@ def update_image(entry, clothes):
             label.image = elm
             label.pack(padx=5, side='left')    
 
-    
-
 def rec(frame, clothes):
     #questframe for input
     quest_frame = ttk.Frame(frame)
@@ -56,7 +55,19 @@ def rec(frame, clothes):
     rec_message = ttk.Label(rec_frame, text="")
     rec_message.pack(padx=30, side='top')
     #image frame to display mutiple images
-    image_frame = ttk.Frame(rec_frame)
-    image_frame.pack(pady=60)
+    # image_frame = ttk.Frame(rec_frame)
+    # image_frame.pack(pady=60)
+
+    # Scrollable frame for images
+    canvas = tk.Canvas(rec_frame)
+    scrollbar = ttk.Scrollbar(rec_frame, orient="horizontal", command=canvas.xview)
+    scrollbar.pack(side='bottom', fill='x')
+
+    image_frame = ttk.Frame(canvas)
+    image_frame.bind("<Configure>", lambda e: canvas.configure(scrollregion=canvas.bbox("all")))
+
+    canvas.create_window((0, 0), window=image_frame, anchor='nw')
+    canvas.pack(side='left', fill='both', expand=True, pady=20)
+    canvas.configure(xscrollcommand=scrollbar.set)
 
 
