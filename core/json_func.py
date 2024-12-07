@@ -1,5 +1,5 @@
 import json
-from class_def import Cloth
+from core.class_def import Cloth
 File_Path = "data.json"
 
 def upload_json(clothes, pre_filenames, pre_clothes):

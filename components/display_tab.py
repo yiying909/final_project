@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import ttk
-from display import display_images
+from core.display import display_images
 
 
 def display_command(frame, image_filenames):
@@ -32,7 +32,7 @@ def display_command(frame, image_filenames):
 
 
 def display(frame, filenames):
-    ttk.Label(frame, text="Your Closet", font=("Arial", 10)).pack(pady=10)
+    ttk.Label(frame, text="Your Closet", font=("Arial", 15)).pack(pady=10)
 
     #canvas with scrollbar
     canvas = tk.Canvas(frame)
