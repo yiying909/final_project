@@ -47,8 +47,8 @@ def get_weather(city):
     # print(content.prettify())  # This will print out the formatted HTML to verify structure
 
     # find actual info needed from content: temp in °F and °C
-    temp_f = int(content.find('span', attrs={'class': 'wob_t q8U8x'}).text)
-    temp_c = int(content.find('span', id='wob_ttm').text)
+    temp_c = int(content.find('span', attrs={"class" : "wob_t"}, id='wob_ttm').text)
+    temp_f = int(content.find('span', attrs={'class': 'wob_t q8U8x'}, id="wob_tm").text)
     real_time = content.find('div', attrs={'class': 'wob_dts'}).text
     description = content.find('div', attrs={'class': 'wob_dcp'}).text
 

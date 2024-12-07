@@ -14,15 +14,17 @@ def get_outfit(temperature):
         outfit.append(bottom_wear[1])
         outfit.append(footwear[1])
     elif temperature >= 50:
-        outfit.append(top_wear[1])
+        outfit.append(top_wear[3])
+        outfit.append(top_wear[0])
         outfit.append(bottom_wear[1])
         outfit.append(footwear[1])
     elif temperature >= 40:
-        outfit.append(top_wear[2])
+        outfit.append(top_wear[3])
+        outfit.append(top_wear[1])
         outfit.append(bottom_wear[1])
         outfit.append(footwear[1])
     elif temperature >= 30:
-        outfit.append(top_wear[3])
+        outfit.append(top_wear[4])
         outfit.append(top_wear[1])
         outfit.append(bottom_wear[1])
         outfit.append(footwear[2])
