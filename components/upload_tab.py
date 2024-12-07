@@ -1,7 +1,7 @@
 import os
 from tkinter import ttk, filedialog, messagebox
-from class_def import Cloth
-from json_func import upload_json
+from final_project.core.class_def import Cloth
+from final_project.core.json_func import upload_json
 
 
 types = ["topwear", "bottomwear", "footwear", "accessories"]
