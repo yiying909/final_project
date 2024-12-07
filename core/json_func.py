@@ -14,6 +14,7 @@ def upload_json(clothes, pre_filenames, pre_clothes):
     }
     with open(File_Path, "w") as file:
         json.dump(data, file, indent=4)
+    return update_filenames
 
 
 def read_json():
