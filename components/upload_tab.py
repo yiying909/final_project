@@ -2,7 +2,7 @@ import os
 from tkinter import ttk, filedialog, messagebox
 from core.class_def import Cloth
 from core.json_func import upload_json
-from components.display_tab import display_command, imageframe
+from components.display_tab import refresh_display
 
 types = ["topwear", "bottomwear", "footwear", "accessories"]
 topwear = ['T-shirt', 'Long-sleeve shirt', 'Sweater', 'Jacket', 'Heavy jacket', 'Heavy winter coat']
@@ -19,7 +19,9 @@ def check_upload(file_name, combo1, combo2):
     if combo1 != "type" and combo2 != "subtype":
         clothes.append(Cloth(file_name, combo2, combo1))
         newfilenames= upload_json(clothes, pre_files, pre_clothes)
-        display_command(imageframe, newfilenames)
+        pre_files = newfilenames
+        refresh_display(newfilenames)
+        
 
     
 
@@ -70,6 +72,7 @@ def upload_image(frame, combo1, combo2):
 
 def upload(frame, filenames, clothes):
     global pre_files, pre_clothes
+
     pre_files, pre_clothes = filenames, clothes
     comboframe = ttk.Frame(frame)
     comboframe.pack(pady=30)
