@@ -1,14 +1,14 @@
 {
     "filenames": [
         "boots1.png",
-        "boots2.png",
-        "boots4.png",
         "gloves1.png",
         "hat1.png",
         "hat2.png",
         "hat3.png",
+        "hat4.png",
         "hjacket1.png",
         "hjacket2.png",
+        "hjacket3.png",
         "hjacket4.png",
         "hwc1.png",
         "hwc2.png",
@@ -23,7 +23,9 @@
         "lsshirt3.png",
         "pants1.png",
         "pants2.png",
+        "pants3.png",
         "pants4.png",
+        "pants5.png",
         "pants6.png",
         "sandals1.png",
         "sandals2.png",
@@ -31,11 +33,12 @@
         "sandals4.png",
         "scarf1.png",
         "scarf2.png",
-        "scarf4.png",
+        "scarf3.png",
         "shorts1.png",
         "shorts2.png",
         "shorts3.png",
         "shorts4.png",
+        "shorts5.png",
         "sneakers1.png",
         "sneakers2.png",
         "sneakers3.png",
@@ -46,21 +49,11 @@
         "sweater3.png",
         "sweater4.png",
         "tshirt1.png",
-        "tshirt3.png"
+        "tshirt2.png"
     ],
     "clothdic": [
         {
             "filename": "boots1.png",
-            "typename": "footwear",
-            "subtypename": "Boots"
-        },
-        {
-            "filename": "boots2.png",
-            "typename": "footwear",
-            "subtypename": "Boots"
-        },
-        {
-            "filename": "boots4.png",
             "typename": "footwear",
             "subtypename": "Boots"
         },
@@ -85,12 +78,22 @@
             "subtypename": "Hats"
         },
         {
+            "filename": "hat4.png",
+            "typename": "accessories",
+            "subtypename": "Hats"
+        },
+        {
             "filename": "hjacket1.png",
             "typename": "topwear",
             "subtypename": "Heavy jacket"
         },
         {
             "filename": "hjacket2.png",
+            "typename": "topwear",
+            "subtypename": "Heavy jacket"
+        },
+        {
+            "filename": "hjacket3.png",
             "typename": "topwear",
             "subtypename": "Heavy jacket"
         },
@@ -165,7 +168,17 @@
             "subtypename": "Pants"
         },
         {
+            "filename": "pants3.png",
+            "typename": "bottomwear",
+            "subtypename": "Pants"
+        },
+        {
             "filename": "pants4.png",
+            "typename": "bottomwear",
+            "subtypename": "Pants"
+        },
+        {
+            "filename": "pants5.png",
             "typename": "bottomwear",
             "subtypename": "Pants"
         },
@@ -205,7 +218,7 @@
             "subtypename": "Scarf"
         },
         {
-            "filename": "scarf4.png",
+            "filename": "scarf3.png",
             "typename": "accessories",
             "subtypename": "Scarf"
         },
@@ -280,7 +293,7 @@
             "subtypename": "T-shirt"
         },
         {
-            "filename": "tshirt3.png",
+            "filename": "tshirt2.png",
             "typename": "topwear",
             "subtypename": "T-shirt"
         }
