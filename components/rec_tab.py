@@ -5,6 +5,7 @@ from core.clothDecison import get_outfit
 from core.display import display_images
 from core.weather import get_weather, get_7dayweather
 from core.class_def import filter 
+from core.json_func import read_json
 
 rec_message, image_frame = None, None
 
@@ -47,6 +48,7 @@ def update_image(entry, clothes):
 
 # create rec tab
 def rec(frame, clothes):
+    filenames, clothes = read_json()  # 获取最新的衣服列表
     #questframe for input
     quest_frame = ttk.Frame(frame)
     quest_frame.pack(pady=40)
