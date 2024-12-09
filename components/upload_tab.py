@@ -20,6 +20,7 @@ def check_upload(file_name, combo1, combo2):
         clothes.append(Cloth(file_name, combo2, combo1))
         newfilenames= upload_json(clothes, pre_files, pre_clothes)
         pre_files = newfilenames
+        pre_clothes = clothes  # 更新预存的衣物信息
         refresh_display(newfilenames)
         
 
@@ -64,6 +65,7 @@ def upload_command(combo1, combo2):
                 f_out.write(f_in.read())
             messagebox.showinfo("Upload Success", f"{file_name} has successfully uploaded.")
             check_upload(file_name, combo1.get(), combo2.get())
+            refresh_display(pre_files)  # 刷新显示，确保新上传的图片显示
         else:
             messagebox.showerror("File Exists","this filename already exists, please name it something else.")
 
