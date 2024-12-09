@@ -6,6 +6,7 @@ from components.upload_tab import upload
 from core.json_func import read_json
 import ttkbootstrap as ttk
 
+#create app window
 root=ttk.Window(themename='cosmo')
 filenames, clothes = read_json()
 

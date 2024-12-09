@@ -8,12 +8,8 @@ from core.class_def import filter
 
 rec_message, image_frame = None, None
 
-def city_input(entry):
-    city = entry.get()
-    if city.strip():
-        real_time, temp_c, temp_f , description = get_weather(city)
-        return real_time, temp_c, temp_f, description
 
+# get rec clothes filenames
 def rec_command(temp_f, clothes):
     outfit = get_outfit(temp_f)
     image_filenames = []
@@ -24,7 +20,16 @@ def rec_command(temp_f, clothes):
             image_filenames.append(random_item.filename)
     return image_filenames
 
+
+# display images
 def update_image(entry, clothes):
+    # access city weather data
+    def city_input(entry):
+        city = entry.get()
+        if city.strip():
+            real_time, temp_c, temp_f , description = get_weather(city)
+            return real_time, temp_c, temp_f, description
+
     real_time, temp_c, temp_f, description = city_input(entry)
     image_filenames = rec_command(temp_f, clothes)
     rec_message.config(text=f'Right now is {real_time}, with temperature is {temp_f}°F/{temp_c}°C, and {description}.')
@@ -39,6 +44,8 @@ def update_image(entry, clothes):
             label.image = elm
             label.pack(padx=5, side='left')    
 
+
+# create rec tab
 def rec(frame, clothes):
     #questframe for input
     quest_frame = ttk.Frame(frame)
@@ -54,6 +61,7 @@ def rec(frame, clothes):
     rec_frame.pack(pady=10)
     rec_message = ttk.Label(rec_frame, text="")
     rec_message.pack(padx=30, side='top')
+
     #image frame to display mutiple images
     # image_frame = ttk.Frame(rec_frame)
     # image_frame.pack(pady=60)

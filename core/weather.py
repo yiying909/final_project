@@ -35,8 +35,6 @@ def get_7dayweather(city):
 
 
 # ask for location and get search result; determine header to access actual attritube on webpage
-
-
 def get_weather(city):
     header = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"}
     url = "https://www.google.com/search?q=" + "weather" + city
@@ -57,13 +55,3 @@ def get_weather(city):
     ''')
 
     return real_time, temp_c, temp_f, description
-
-
-def tm_get_weather():
-    def get_city():
-        location = input("where are you at? ")
-        return location
-    get_weather(get_city())
-    
-
-# tm_get_weather()

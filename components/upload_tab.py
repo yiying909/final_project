@@ -12,7 +12,7 @@ accessories = ['Gloves', 'Scarf', 'Hat']
 
 pre_files, pre_clothes = None, None
 
-
+# after upload, store data in json and refresh display
 def check_upload(file_name, combo1, combo2):
     global pre_files, pre_clothes
     clothes = []
@@ -24,7 +24,7 @@ def check_upload(file_name, combo1, combo2):
         
 
     
-
+# update combobox2 options based on combobox1 answer
 def update_combo2(event, combo1, combo2):
     global topwear, bottomwear, footwear, accessories
 
@@ -38,6 +38,7 @@ def update_combo2(event, combo1, combo2):
         combo2['values'] = accessories
     
 
+# create 2 upload comboboxes
 def upload_combo(frame):
     global types
     ttk.Label(frame, text="Please select the type and subtype of the cloth you are uploading.").pack(pady=10)
@@ -51,6 +52,7 @@ def upload_combo(frame):
     
     return cloth_type, cloth_subtype
 
+# dialog upload info
 def upload_command(combo1, combo2):
     global pre_files, pre_clothes
     file_path = filedialog.askopenfilename(title="Upload the image here.", filetypes=[("Image Files", "*.png")])
@@ -65,11 +67,14 @@ def upload_command(combo1, combo2):
         else:
             messagebox.showerror("File Exists","this filename already exists, please name it something else.")
 
+# upload button created
 def upload_image(frame, combo1, combo2):
     upload_frame = ttk.Frame(frame)
     upload_frame.pack(pady=65)
     ttk.Button(upload_frame, text="Select Image", command= lambda: upload_command(combo1, combo2)).pack(pady=10)
 
+
+# create upload tab
 def upload(frame, filenames, clothes):
     global pre_files, pre_clothes
 
