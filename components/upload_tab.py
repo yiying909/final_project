@@ -19,8 +19,8 @@ def check_upload(file_name, combo1, combo2):
     if combo1 != "type" and combo2 != "subtype":
         clothes.append(Cloth(file_name, combo2, combo1))
         newfilenames= upload_json(clothes, pre_files, pre_clothes)
-        pre_files = newfilenames
-        refresh_display(newfilenames)
+        topass = [file_name]
+        refresh_display(topass)
         
 
     

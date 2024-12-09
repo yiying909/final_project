@@ -47,11 +47,12 @@ def display_command(frame, image_filenames):
 
 
 # refresh display used in upload tab after uploaded
-def refresh_display(filenames):
-    if imageframe:
-        for widget in imageframe.winfo_children():
-            widget.destroy()
-        display_command(imageframe, filenames)
+def refresh_display(filename):
+    global imageframe
+
+    imageframe.images_cache.extend(display_images(filename))  # add new images to the cache
+    # Update the display with the new cache
+    display_command(imageframe, filename)
 
 
 
