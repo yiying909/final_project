@@ -51,10 +51,7 @@
         "tshirt1.png",
         "tshirt2.png",
         "tshirt3.png",
-        "gloves2.png",
-        "boots2.png",
-        "sweater5.png",
-        "pants7.png"
+        "gloves2.png"
     ],
     "clothdic": [
         {
@@ -311,21 +308,6 @@
             "filename": "gloves2.png",
             "typename": "accessories",
             "subtypename": "Gloves"
-        },
-        {
-            "filename": "boots2.png",
-            "typename": "footwear",
-            "subtypename": "Boots"
-        },
-        {
-            "filename": "sweater5.png",
-            "typename": "topwear",
-            "subtypename": "Sweater"
-        },
-        {
-            "filename": "pants7.png",
-            "typename": "bottomwear",
-            "subtypename": "Pants"
         }
     ]
 }
